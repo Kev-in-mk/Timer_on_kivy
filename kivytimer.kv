@@ -1,0 +1,29 @@
+#:kivy 1.0.9
+<KivyTimer>:
+    BoxLayout:
+        orientation: 'vertical'
+        pos: root.pos
+        size: root.size
+
+        Label:
+            text: str(root.left_time)
+            font_size: 100
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1.0, 0.3
+
+            Button:
+                text: '+1 minute'
+                font_size: 16
+                on_press: root.on_command('+1 minute')
+
+            Button:
+                text: 'Stop' if root.is_countdown else 'Start'
+                font_size: 16
+                on_press: root.on_command('start/stop')
+
+            Button:
+                text: 'Reset'
+                font_size: 16
+                on_press: root.on_command('reset')
