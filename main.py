@@ -1,6 +1,7 @@
 from kivy.config import Config
-Config.set('graphics', 'width', '300')
-Config.set('graphics', 'height', '150')
+# window_size変更
+Config.set('graphics', 'width', '800')
+Config.set('graphics', 'height', '600')
 
 from kivy.lang import Builder
 from kivy.uix.widget import Widget
