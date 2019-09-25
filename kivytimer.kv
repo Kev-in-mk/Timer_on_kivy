@@ -12,7 +12,6 @@
         BoxLayout:
             orientation: 'horizontal'
             size_hint: 1.0, 0.3
-            # pos_hint: {"x":0, "top":0.3}
 
             Button:
                 text: '+1 minute'
@@ -29,23 +28,22 @@
                 font_size: 16
                 on_press: root.on_command('reset')
 
-        # ボタン追加 まだ処理は実装していない
+        # ボタン追加 
         BoxLayout:
             orientation: 'horizontal'
             size_hint: 1.0, 0.3
-            # pos_hint: {"x":0, "top":0.7}
-
-            Button:
-                text: '+3 minute'
-                font_size: 16
-                # on_press: root.on_command('+1 minute')
-
-            Button:
-                text: '+30 second'
-                font_size: 16
-                # on_press: root.on_command('start/stop')
 
             Button:
                 text: '+10 second'
                 font_size: 16
-                # on_press: root.on_command('reset')
+                on_press: root.on_command('+10 second')
+
+            Button:
+                text: '+30 second'
+                font_size: 16
+                on_press: root.on_command('+30 second')
+
+            Button:
+                text: '+3 minute'
+                font_size: 16
+                on_press: root.on_command('+3 minute')

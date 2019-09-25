@@ -28,6 +28,12 @@ class KivyTimer(Widget):
         elif command == 'reset':
             self.stop_timer()
             self.left_time = 0
+        elif command == '+10 second':
+            self.left_time += 10
+        elif command == '+30 second':
+            self.left_time += 30
+        elif command == '+3 minute':
+            self.left_time += 180
 
     def on_countdown(self, dt):
         self.left_time -= 1
